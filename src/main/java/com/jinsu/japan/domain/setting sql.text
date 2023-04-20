@@ -10,10 +10,14 @@ CREATE TABLE members(
 
 CREATE SEQUENCE members_mno_seq;
 -----------------------------------
-CREATE TABLE hobby(
-  	m_no NUMBER(10),
-  	hobby1 VARCHAR2(100),
-  	hobby2 VARCHAR2(100),
-  	hobby3 VARCHAR2(100),
-  	hobby4 VARCHAR2(100)
+CREATE TABLE boards(
+
+	b_id VARCHAR2(100) PRIMARY KEY,
+	b_writer VARCHAR2(100),		
+	b_title VARCHAR2(100),			
+	b_content VARCHAR2(100),			
+	b_pwd VARCHAR2(100)
+	
 );
+
+CREATE SEQUENCE boards_bid_seq;

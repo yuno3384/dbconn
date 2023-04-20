@@ -33,63 +33,20 @@ background: linear-gradient(90deg, rgba(5,208,244,0.22172619047619047) 0%, rgba(
 	position: absolute;
     left: 6em;
 }
+.editBtn{
+	position: absolute;
+    right: 30%;
+
+}
+table#notice{
+
+	width : 700px;
+	
+}
 </style>
 </head>
 <body>
-<header>
-<nav class="navbar navbar-expand-lg bg-danger-subtle">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">jQuestion</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.do"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
-  <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
-</svg></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu bg-danger-subtle">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li>
-      </ul>
-      <ul class="navbar-nav justify-content-end mb-2 mb-lg-0">
-        <c:choose>
-        <c:when test="${empty userId }">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="login.do">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Signup.do">SignUp</a>
-        </li>
-        </c:when>
-        <c:otherwise>
-        <li class="nav-item">
-          ${userName}님 환영합니다.
-        </li>
-        </c:otherwise>
-        </c:choose>
-      </ul>
-    </div>
-  </div>
-</nav>
-</header>
-
+<jsp:include page="header.jsp"></jsp:include>
 
 	<div class="container text-center" style="margin-left: 0px;">
 		<div class="row">
@@ -117,64 +74,12 @@ background: linear-gradient(90deg, rgba(5,208,244,0.22172619047619047) 0%, rgba(
       });   
       
     </script>
-    
-    <!--------------------Link ----------------------------->
-    <div id="div2" class="position-fixed top-0 end-0 mt-65 col-sm-2 bg-success bg-opacity-75 bg-gradient text-white">
-	<h4>Link</h4>
-	<div class="row">
-		<div id="div21" class="mt-3 row-sm-2 em-5 text-body">
-		<a class="fs-1 taxt-danger  text-decoration-none " href= "https://dictionary.goo.ne.jp/">
-		<img alt="goo 辞書" src="resources/dictionary_goo.png" style="width: 40%; height:90%;" />
-		</a>
-		</div>	
-		<div id="div21" class="mt-3 row-sm-2 em-5 text-body">
-		<a class="fs-1 taxt-danger  text-decoration-none " href= "https://kotobank.jp/">
-		<img alt="コトバンク" src="resources/dictionary_kotobank.png" style="width: 70%; height:90%;" />
-		</a>
-		</div>	
-		<div id="div21" class="mt-3 row-sm-2 em-5 text-body">
-		<a class="fs-1 taxt-danger  text-decoration-none " href= "https://www.yahoo.co.jp/">
-		<img alt="ヤフー ジャパン" src="resources/Yahoo_Japan.png" style="width: 80%; height:70%;" />
-		</a>
-		</div>	
-		<div id="div21" class="mt-3 row-sm-2 em-5 text-body">
-		<a class="fs-1 taxt-danger  text-decoration-none " href= "https://www.jlpt.or.kr/main/main2.asp">
-		<img alt="日本語能力試験 JLPT" src="resources/jlpt.jpg" style="width: 80%; height:70%;" />
-		</a>
-		</div>	
-		<div id="div21" class="mt-3 row-sm-2 em-5 text-body">
-		<a class="fs-1 taxt-danger  text-decoration-none " href= "https://blog.naver.com/japansisa/">
-		<img alt="시사일본어사 블로그" src="resources/sisa.png" style="width: 90%; height:60%;" />
-		</a>
-		</div>	
-		<div id="div21" class="mt-3 row-sm-2 em-5 text-body">			
-		<a class="fs-1 taxt-danger  text-decoration-none " href= "https://www.nhk.or.jp/kokokoza/">
-		<img alt="NHK 高校講座" src="resources/NHK.svg" style="width: 80%; height:70%;" />
-		</a>
-		</div>	
-	</div>
-</div>
+<jsp:include page="link.jsp"></jsp:include>
 			<div id="div3" class="mt-3 ms-3 col-sm-7 bg-danger bg-grient text-body">
 			<h2>게시판</h2>
-			<button id="insertBoard" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+			<button id="insertBoard" type="button" class="btn btn-primary editBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">
   				게시글 작성
 			</button>
-			<button id="insertBoard" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  				게시글 작성
-			</button>
-			<button id="insertBoard" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  				게시글 작성
-			</button>
-			<button id="insertBoard" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  				게시글 작성
-			</button>
-			<button id="insertBoard" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  				게시글 작성
-			</button>
-			<button id="insertBoard" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  				게시글 작성
-			</button>
-			
 		
 			<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -186,6 +91,13 @@ background: linear-gradient(90deg, rgba(5,208,244,0.22172619047619047) 0%, rgba(
       <div class="modal-body">
         <form>
         <table class="table table-bordered">
+        <thead>
+        <tr style="display: none">
+        <td>게시물 id</td>
+        <td>
+        <input type="hidden" name="b_id">
+        </td>
+        </tr>
         <tbody>
         <tr>
         <td>작성자</td>
@@ -196,30 +108,44 @@ background: linear-gradient(90deg, rgba(5,208,244,0.22172619047619047) 0%, rgba(
         <tr>
         <td>제목</td>
         <td>
-        <input type="text" class="modal_table" name="">
+        <input type="text" class="modal_table" name="b_title">
         </td>
         </tr>
         <tr>
-        <td>zz</td>
-        <td><input type="text" class="modal_table" name=""></td>
+        <td>비밀번호</td>
+        <td><input type="password" class="modal_table" name="b_pwd"></td>
         </tr>
         <tr>
-        <td>zz</td>
-        <td><textarea rows="10" cols="46"></textarea></td>
+        <td>내용</td>
+        <td><textarea name="b_content" rows="10" cols="46"></textarea></td>
         </tr>
         </tbody>
         </table>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+<!--         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+        <button type="button" class="btn btn-primary">저장</button>
       </div>
     </div>
   </div>
 </div>
+			<div class="mt-5 ms-3 col-sm-5 ">
+			<table id="notice" class="mt-5 bg-secondary table table-bordered">
+			<thead>
+			<tr>
+			<td class="col-sm-4">번호</td>
+			<td class="col-sm-4">이름</td>
+			<td class="col-sm-4">저자</td>
+<!-- 			<td></td> -->
+			</tr>
+			
+			</table>
+			</div>
+			
+			
+					
 			</div>		
-			<div id="div4" class="mt-3 ms-3 col-sm-5 ">sjjdjfdk</div>		
 			
 			<div id="div5" class="mt-3 ms-3 col-sm-3 bg-secondary bg-gradient text-white">sjjdjfd</div>
 			
