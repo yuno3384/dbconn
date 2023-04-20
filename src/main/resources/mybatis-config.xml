@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- src.main.java에 두면 너무 파일이 섞여있어 헷갈리므로 main.resources에서 진행 -->
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<typeAliases> 
+		<typeAlias alias="member" type="com.jinsu.japan.domain.MemberVO"/>
+<!-- 		<typeAlias alias="board" type="com.jinsu.japan.domain.BoardVO"/> -->
+	</typeAliases>
+</configuration>
+
+<!-- 나머지는 root-context라는 빈 컨테이너에서 작성됨 -->  

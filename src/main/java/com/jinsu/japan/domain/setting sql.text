@@ -1,0 +1,19 @@
+CREATE TABLE members(
+
+	m_no VARCHAR2(100) PRIMARY KEY,
+	m_email VARCHAR2(100),
+	m_pwd VARCHAR2(100),
+	m_name VARCHAR2(100),
+	m_birthday VARCHAR2(100)
+	
+);
+
+CREATE SEQUENCE members_mno_seq;
+-----------------------------------
+CREATE TABLE hobby(
+  	m_no NUMBER(10),
+  	hobby1 VARCHAR2(100),
+  	hobby2 VARCHAR2(100),
+  	hobby3 VARCHAR2(100),
+  	hobby4 VARCHAR2(100)
+);
