@@ -22,6 +22,12 @@ background: linear-gradient(90deg, rgba(5,208,244,0.22172619047619047) 0%, rgba(
 	width: 30%;
 	height: 32rem;
 }
+.em-5{
+	height: 5em;
+}
+.mt-65{
+	margin-top: 4.5em !important;
+}
 </style>
 </head>
 <body>
@@ -78,10 +84,14 @@ background: linear-gradient(90deg, rgba(5,208,244,0.22172619047619047) 0%, rgba(
   </div>
 </nav>
 </header>
-	<div class="container text-center">
+
+
+	<div class="container text-center" style="margin-left: 0px;">
 		<div class="row">
-			<div id="calendar" class="mt-3 col-sm-4 bg-secondary bg-gradient"></div>
-			<script>
+	<!------------------ calendar ----------------->	
+	
+			<div id="calendar" class="positon-fixed top-0 start-0 mt-3 ms-3 bg-secondary bg-gradient"></div>
+	<script>
       document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
         var calendar = new FullCalendar.Calendar(calendarEl, {
@@ -100,13 +110,51 @@ background: linear-gradient(90deg, rgba(5,208,244,0.22172619047619047) 0%, rgba(
 //       	});
         
       });   
-
+      
     </script>
-			<div id="div2" class="mt-3 ms-3 col-sm-3 bg-success bg-gradient text-white">sjjdj</div>
-			<div id="div3" class="mt-3 ms-3 col-sm-3 bg-danger bg-grient text-body">sjjdjfdkj</div>		
-			<div id="div4" class="mt-3 col-sm-3 ">sjjdjfdk</div>		
-			<div id="div5" class="mt-3 col-sm-3 bg-secondary bg-gradient text-white">sjjdjfd</div>
-			<div id="div6" class="mt-3 col-sm-3 bg-info bg-gradient text-white">sjjdj</div>
+    
+    <!--------------------Link ----------------------------->
+    <div id="div2" class="position-fixed top-0 end-0 mt-65 col-sm-2 bg-success bg-opacity-75 bg-gradient text-white">
+	<h4>Link</h4>
+	<div class="row">
+	<div id="div21" class="mt-3 row-sm-2 em-5 text-body">
+	<a class="fs-1 taxt-danger  text-decoration-none " href= "https://dictionary.goo.ne.jp/">
+	<img alt="goo 辞書" src="resources/dictionary_goo.png" style="width: 40%; height:90%;" />
+	</a>
+	</div>	
+	<div id="div21" class="mt-3 row-sm-2 em-5 text-body">
+	<a class="fs-1 taxt-danger  text-decoration-none " href= "https://kotobank.jp/">
+	<img alt="コトバンク" src="resources/dictionary_kotobank.png" style="width: 70%; height:90%;" />
+	</a>
+	</div>	
+	<div id="div21" class="mt-3 row-sm-2 em-5 text-body">
+	<a class="fs-1 taxt-danger  text-decoration-none " href= "https://www.yahoo.co.jp/">
+	<img alt="ヤフー ジャパン" src="resources/Yahoo_Japan.png" style="width: 80%; height:70%;" />
+	</a>
+	</div>	
+	<div id="div21" class="mt-3 row-sm-2 em-5 text-body">
+	<a class="fs-1 taxt-danger  text-decoration-none " href= "https://www.jlpt.or.kr/main/main2.asp">
+	<img alt="日本語能力試験 JLPT" src="resources/jlpt.jpg" style="width: 80%; height:70%;" />
+	</a>
+	</div>	
+	<div id="div21" class="mt-3 row-sm-2 em-5 text-body">
+	<a class="fs-1 taxt-danger  text-decoration-none " href= "https://blog.naver.com/japansisa/">
+	<img alt="시사일본어사 블로그" src="resources/sisa.png" style="width: 90%; height:60%;" />
+	</a>
+	</div>	
+	<div id="div21" class="mt-3 row-sm-2 em-5 text-body">			
+	<a class="fs-1 taxt-danger  text-decoration-none " href= "https://www.nhk.or.jp/kokokoza/">
+	<img alt="NHK 高校講座" src="resources/NHK.svg" style="width: 80%; height:70%;" />
+	</a>
+	</div>	
+	</div>
+	</div>
+			<div id="div3" class="fs-2 mt-3 ms-3 col-sm-7 bg-danger bg-grient text-body">게시판</div>		
+			<div id="div4" class="mt-3 ms-3 col-sm-5 ">sjjdjfdk</div>		
+			
+			<div id="div5" class="mt-3 ms-3 col-sm-3 bg-secondary bg-gradient text-white">sjjdjfd</div>
+			
+			<div id="div6" class="mt-3 ms-3 col-sm-3 bg-info bg-gradient text-white">sjjdj</div>
 			<div id="div7" class="mt-3 col-sm-3 bg-warning bg-grient text-body">sjjdjfdkj</div>		
 			<div id="div8" class="mt-3 col-sm-3">sjjdjfdk</div>		
 		</div>
