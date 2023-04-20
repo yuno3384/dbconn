@@ -68,14 +68,14 @@ public class MemberController {
 	public String checkId(MemberVO vo) {
 		
 		System.out.println("ajax접근");
-//		System.out.println(vo.getM_email());
-//		System.out.println(vo.getM_name());
-//		System.out.println(vo.getM_birthday());
+		System.out.println(vo.getM_email());
+		if(vo.getM_email() == null) return "ID를 입력해주세요.";
 		
 		// 데이터베이스 조회
 		MemberVO resultVO = memberService.checkId(vo);
 		
 		String result = "ID가 사용가능합니다.";
+//		if(vo.getM_email().equals("@이메일주소")) result="ID를 입력해주세요.";
 		if(resultVO != null) result = "ID가 이미 있습니다.";		
 		
 		return result;

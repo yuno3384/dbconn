@@ -18,7 +18,10 @@
 	background: rgb(5,208,244);
 background: linear-gradient(90deg, rgba(5,208,244,0.22172619047619047) 0%, rgba(0,212,255,1) 100%);
 }
-
+#calendar{
+	width: 30%;
+	height: 32rem;
+}
 </style>
 </head>
 <body>
@@ -79,7 +82,6 @@ background: linear-gradient(90deg, rgba(5,208,244,0.22172619047619047) 0%, rgba(
 		<div class="row">
 			<div id="calendar" class="mt-3 col-sm-4 bg-secondary bg-gradient"></div>
 			<script>
-
       document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
         var calendar = new FullCalendar.Calendar(calendarEl, {
@@ -88,16 +90,25 @@ background: linear-gradient(90deg, rgba(5,208,244,0.22172619047619047) 0%, rgba(
           locale: "ko",
         });
         calendar.render();
-      });
+//         $(".fc-daygrid-day-number").each(function(){
+
+//         	var day = $(this).text();
+
+//         	day = day.replace(/일/gi," ");
+
+//         	$(this).text(day);
+//       	});
+        
+      });   
 
     </script>
-<!-- 			<div id="div2" class="col-sm-3 bg-success bg-gradient text-white">sjjdj</div> -->
-<!-- 			<div id="div3" class="col-sm-3 bg-danger bg-grient text-body">sjjdjfdkj</div>		 -->
-<!-- 			<div id="div4" class="col-sm-3 ">sjjdjfdk</div>		 -->
-<!-- 			<div id="div5" class="col-sm-3 bg-secondary bg-gradient text-white">sjjdjfd</div> -->
-<!-- 			<div id="div6" class="col-sm-3 bg-info bg-gradient text-white">sjjdj</div> -->
-<!-- 			<div id="div7" class="col-sm-3 bg-warning bg-grient text-body">sjjdjfdkj</div>		 -->
-<!-- 			<div id="div8" class="col-sm-3">sjjdjfdk</div>		 -->
+			<div id="div2" class="mt-3 ms-3 col-sm-3 bg-success bg-gradient text-white">sjjdj</div>
+			<div id="div3" class="mt-3 ms-3 col-sm-3 bg-danger bg-grient text-body">sjjdjfdkj</div>		
+			<div id="div4" class="mt-3 col-sm-3 ">sjjdjfdk</div>		
+			<div id="div5" class="mt-3 col-sm-3 bg-secondary bg-gradient text-white">sjjdjfd</div>
+			<div id="div6" class="mt-3 col-sm-3 bg-info bg-gradient text-white">sjjdj</div>
+			<div id="div7" class="mt-3 col-sm-3 bg-warning bg-grient text-body">sjjdjfdkj</div>		
+			<div id="div8" class="mt-3 col-sm-3">sjjdjfdk</div>		
 		</div>
 	</div>
 </body>

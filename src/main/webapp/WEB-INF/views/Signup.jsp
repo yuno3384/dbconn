@@ -46,7 +46,17 @@ select{
 	height: 20%;
 
 }
+.idCheck_off{
 
+	display : inline;
+	border : none;
+	background-color : #f8d7da;
+
+}
+.ui-datepicker-week-end {color:red;}
+.ui-datepicker-week-end .ui-state-default {color:red;}
+
+img.ui-datepicker-trigger { width: 16px; height: 16px;}
 </style>
 <script type="text/javascript">
 $(function() {
@@ -60,25 +70,36 @@ $(function() {
 	// 6. error : 요청이 실채하면 실행이 되는 함수(callback), function(){}으로 생성
 	
 	// JS를 이용해서 채워주기 단,null에 주의 (java에서 이 데이터가 실제로 null인지 확인해야)
+	$('#checkId').click(function() {
 	
 	var email = $("#m_email_id").val()+"@"+$("#m_email_site").val();
-	
 	var inputData = {m_email : email}; // json형식
+	if(email == "@이메일주소"){inputData = {m_email : null};}
 	// 작은 form태그 > 실행이 되면 나오는 결과를 success로 표현
-	$('')
 	$.ajax({
 		url: "checkId.do",
 		data : inputData,
 		type: "post",
 		contentType : 'application/x-www-form-urlencoded;charset=UTF-8',
 		success: function(ajaxData) {
-			alert(ajaxData);
+			if(email == null){alert('아이디를 입력해주세요.');
+			$("#m_email_id").focus(); }
+			else if(email.match("@이메일주소")){alert('이메일주소를 다시 확인해주세요.');
+			$("#m_email_id").focus();
+			}
+			else{
+				$("#idCheck").css({	
+				"color" : "red"
+				})
+				$("#idCheck").val(ajaxData);};
 		},
-		error: function() {
-			alert('실패');
+		error : function(err) {
+			alert('에러 :'+err)
 		}
 		
 	})
+	})
+	
 	$("#register").validate({
 	     /**
 	    * submitHandler : form 양식이 유효한 경우 실질적인 
@@ -130,8 +151,8 @@ $(function() {
 	    },
 	    success: function(label) {
 		      label.addClass('valid');
-		      label.text('성공'); // 출력은 안되지만 이거 없으면 녹색체크가 화면에 안 뜬다
-		    }
+		      label.text('성공'); // 출력은 안되지만 이거 없으면 녹색체크가 화면에 안 뜬다=
+	    }
 // 	    errorPlacement: function(err, element){ // 유효성 에러 발생시 처리하는 로직
 // 	        $(element).closest(".box-input").addClass("error");
 // 	    },
@@ -140,7 +161,7 @@ $(function() {
 	 $("#m_birthday").datepicker({
 		  
          showOn: "both", // 버튼과 텍스트 필드 모두 캘린더를 보여준다.
-         buttonImage: "/application/db/jquery/images/calendar.gif", // 버튼 이미지
+         buttonImage: "resources/calendar.png", // 버튼 이미지
          buttonImageOnly: true, // 버튼에 있는 이미지만 표시한다.
          changeMonth: true, // 월을 바꿀수 있는 셀렉트 박스를 표시한다.
          changeYear: true, // 년을 바꿀 수 있는 셀렉트 박스를 표시한다.
@@ -209,39 +230,51 @@ $(function() {
 
       <!-- Email input -->
       <div class="form-outline mb-3">
+        <label class="form-label" for="m_email_id"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-check-fill" viewBox="0 0 16 16">
+  <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 4.697v4.974A4.491 4.491 0 0 0 12.5 8a4.49 4.49 0 0 0-1.965.45l-.338-.207L16 4.697Z"/>
+  <path d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-1.993-1.679a.5.5 0 0 0-.686.172l-1.17 1.95-.547-.547a.5.5 0 0 0-.708.708l.774.773a.75.75 0 0 0 1.174-.144l1.335-2.226a.5.5 0 0 0-.172-.686Z"/>
+</svg></label>
         <input type="text" name ="m_email_id" id="m_email_id" class="form-control-inline w-40" /> @
-        <select class="form-control-inline w-50" name="m_email_site" id="m_email_site">
-<!--         <option>이메일주소</option> -->
+        <select class="form-control-inline w-40" name="m_email_site" id="m_email_site">
+        <option>이메일주소</option>
         <option>naver.com</option>
         <option>gmail.com</option>
         <option>hanmail.net</option>
         <option>nate.com</option>
         </select>
-        <br>
-        <label class="form-label" for="m_email_id">이메일</label>
+        <button id="checkId">아이디 확인</button>
+ 
+        <input type="text" class="idCheck_off"  id="idCheck"/>
       </div>
 
       <!-- Username input -->
       <div class="form-outline mb-3">
-        <input type="text" name="m_name" id="m_name" class="form-control" />
-        <label class="form-label" for="m_name">성명</label>
+        <label class="form-label" for="m_name"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-check-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+  <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+</svg></label>
+        <input type="text" name="m_name" id="m_name" class="form-control" style="display : inline-block; width: 94%; "/>
       </div>
 
       <!-- Password input -->
       <div class="form-outline mb-3">
-        <input type="password" name="m_pwd" id="m_pwd" class="form-control" />
-        <label class="form-label" for="m_pwd">비밀번호</label>
+        <label class="form-label" for="m_pwd"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pass-fill" viewBox="0 0 16 16">
+  <path d="M10 0a2 2 0 1 1-4 0H3.5A1.5 1.5 0 0 0 2 1.5v13A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-13A1.5 1.5 0 0 0 12.5 0H10ZM4.5 5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1Zm0 2h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1 0-1Z"/>
+</svg></label>
+        <input type="password" name="m_pwd" id="m_pwd" class="form-control" style="display : inline-block; width: 94%; "/>
       </div>
 
       <!-- Repeat Password input -->
       <div class="form-outline mb-3">
-        <input type="password" name="m_rePwd" id="m_rePwd" class="form-control" />
-        <label class="form-label" for="m_rePwd">비밀번호 확인</label>
+        <label class="form-label" for="m_rePwd"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-all" viewBox="0 0 16 16">
+  <path d="M8.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L2.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093L8.95 4.992a.252.252 0 0 1 .02-.022zm-.92 5.14.92.92a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 1 0-1.091-1.028L9.477 9.417l-.485-.486-.943 1.179z"/>
+</svg></label>
+        <input type="password" name="m_rePwd" id="m_rePwd" class="form-control" style="display : inline-block; width: 94%; "/>
       </div>
       <!-- Birthday input -->
       <div class="form-outline mb-3">
-        <input type="text" name="m_birthday" id="m_birthday" class="form-control" readonly="readonly"/>
-        <label class="form-label" for="m_birthday">생일</label>
+        <label class="form-label" for="m_birthday"><img alt="생일" src="resources/birthday.png" style="width: 16px; height:16px; "></label>
+        <input type="text" name="m_birthday" id="m_birthday" class="form-control" style="display : inline-block; width: 94%; " readonly="readonly"/>
       </div>
 
       <!-- Checkbox -->
