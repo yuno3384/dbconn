@@ -28,6 +28,9 @@ background: linear-gradient(90deg, rgba(5,208,244,0.22172619047619047) 0%, rgba(
 .mt-65{
 	margin-top: 4.5em !important;
 }
+/* #insertBoard{ */
+/* 	position: relative; */
+/* } */
 </style>
 </head>
 <body>
@@ -117,39 +120,105 @@ background: linear-gradient(90deg, rgba(5,208,244,0.22172619047619047) 0%, rgba(
     <div id="div2" class="position-fixed top-0 end-0 mt-65 col-sm-2 bg-success bg-opacity-75 bg-gradient text-white">
 	<h4>Link</h4>
 	<div class="row">
-	<div id="div21" class="mt-3 row-sm-2 em-5 text-body">
-	<a class="fs-1 taxt-danger  text-decoration-none " href= "https://dictionary.goo.ne.jp/">
-	<img alt="goo 辞書" src="resources/dictionary_goo.png" style="width: 40%; height:90%;" />
-	</a>
-	</div>	
-	<div id="div21" class="mt-3 row-sm-2 em-5 text-body">
-	<a class="fs-1 taxt-danger  text-decoration-none " href= "https://kotobank.jp/">
-	<img alt="コトバンク" src="resources/dictionary_kotobank.png" style="width: 70%; height:90%;" />
-	</a>
-	</div>	
-	<div id="div21" class="mt-3 row-sm-2 em-5 text-body">
-	<a class="fs-1 taxt-danger  text-decoration-none " href= "https://www.yahoo.co.jp/">
-	<img alt="ヤフー ジャパン" src="resources/Yahoo_Japan.png" style="width: 80%; height:70%;" />
-	</a>
-	</div>	
-	<div id="div21" class="mt-3 row-sm-2 em-5 text-body">
-	<a class="fs-1 taxt-danger  text-decoration-none " href= "https://www.jlpt.or.kr/main/main2.asp">
-	<img alt="日本語能力試験 JLPT" src="resources/jlpt.jpg" style="width: 80%; height:70%;" />
-	</a>
-	</div>	
-	<div id="div21" class="mt-3 row-sm-2 em-5 text-body">
-	<a class="fs-1 taxt-danger  text-decoration-none " href= "https://blog.naver.com/japansisa/">
-	<img alt="시사일본어사 블로그" src="resources/sisa.png" style="width: 90%; height:60%;" />
-	</a>
-	</div>	
-	<div id="div21" class="mt-3 row-sm-2 em-5 text-body">			
-	<a class="fs-1 taxt-danger  text-decoration-none " href= "https://www.nhk.or.jp/kokokoza/">
-	<img alt="NHK 高校講座" src="resources/NHK.svg" style="width: 80%; height:70%;" />
-	</a>
-	</div>	
+		<div id="div21" class="mt-3 row-sm-2 em-5 text-body">
+		<a class="fs-1 taxt-danger  text-decoration-none " href= "https://dictionary.goo.ne.jp/">
+		<img alt="goo 辞書" src="resources/dictionary_goo.png" style="width: 40%; height:90%;" />
+		</a>
+		</div>	
+		<div id="div21" class="mt-3 row-sm-2 em-5 text-body">
+		<a class="fs-1 taxt-danger  text-decoration-none " href= "https://kotobank.jp/">
+		<img alt="コトバンク" src="resources/dictionary_kotobank.png" style="width: 70%; height:90%;" />
+		</a>
+		</div>	
+		<div id="div21" class="mt-3 row-sm-2 em-5 text-body">
+		<a class="fs-1 taxt-danger  text-decoration-none " href= "https://www.yahoo.co.jp/">
+		<img alt="ヤフー ジャパン" src="resources/Yahoo_Japan.png" style="width: 80%; height:70%;" />
+		</a>
+		</div>	
+		<div id="div21" class="mt-3 row-sm-2 em-5 text-body">
+		<a class="fs-1 taxt-danger  text-decoration-none " href= "https://www.jlpt.or.kr/main/main2.asp">
+		<img alt="日本語能力試験 JLPT" src="resources/jlpt.jpg" style="width: 80%; height:70%;" />
+		</a>
+		</div>	
+		<div id="div21" class="mt-3 row-sm-2 em-5 text-body">
+		<a class="fs-1 taxt-danger  text-decoration-none " href= "https://blog.naver.com/japansisa/">
+		<img alt="시사일본어사 블로그" src="resources/sisa.png" style="width: 90%; height:60%;" />
+		</a>
+		</div>	
+		<div id="div21" class="mt-3 row-sm-2 em-5 text-body">			
+		<a class="fs-1 taxt-danger  text-decoration-none " href= "https://www.nhk.or.jp/kokokoza/">
+		<img alt="NHK 高校講座" src="resources/NHK.svg" style="width: 80%; height:70%;" />
+		</a>
+		</div>	
 	</div>
-	</div>
-			<div id="div3" class="fs-2 mt-3 ms-3 col-sm-7 bg-danger bg-grient text-body">게시판</div>		
+</div>
+			<div id="div3" class="mt-3 ms-3 col-sm-7 bg-danger bg-grient text-body">
+			<h2>게시판</h2>
+			<button id="insertBoard" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  				게시글 작성
+			</button>
+			<button id="insertBoard" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  				게시글 작성
+			</button>
+			<button id="insertBoard" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  				게시글 작성
+			</button>
+			<button id="insertBoard" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  				게시글 작성
+			</button>
+			<button id="insertBoard" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  				게시글 작성
+			</button>
+			<button id="insertBoard" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  				게시글 작성
+			</button>
+			
+		
+			<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+        <table class="table table-bordered">
+        <thead>
+        <h2>게시글</h2>
+        <tbody>
+        <tr>
+        <td>작성자</td>
+        <td>
+        <input type="text" style="border: none; "name="m_name" value="${userName }" readonly="readonly">
+        </td>
+        </tr>
+        <tr>
+        <td>제목</td>
+        <td>
+        <input type="text" name="">
+        </td>
+        </tr>
+        <tr>
+        <td>zz</td>
+        <td>zzz</td>
+        </tr>
+        <tr>
+        <td>zz</td>
+        <td>zzz</td>
+        </tr>
+        </tbody>
+        </table>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+			</div>		
 			<div id="div4" class="mt-3 ms-3 col-sm-5 ">sjjdjfdk</div>		
 			
 			<div id="div5" class="mt-3 ms-3 col-sm-3 bg-secondary bg-gradient text-white">sjjdjfd</div>
