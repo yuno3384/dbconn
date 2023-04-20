@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class MemberVO {
-	// create table member
+	// create table members
 	private int m_no;					// 회원고유번호
 	private String m_email_id;			// 회원이 입력한  email계정 앞부분
 	private String m_email_site;		// 회원이 입력한  email계정 뒷부분

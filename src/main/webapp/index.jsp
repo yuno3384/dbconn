@@ -28,9 +28,11 @@ background: linear-gradient(90deg, rgba(5,208,244,0.22172619047619047) 0%, rgba(
 .mt-65{
 	margin-top: 4.5em !important;
 }
-/* #insertBoard{ */
-/* 	position: relative; */
-/* } */
+.modal_table{
+	border: none;
+	position: absolute;
+    left: 6em;
+}
 </style>
 </head>
 <body>
@@ -178,34 +180,32 @@ background: linear-gradient(90deg, rgba(5,208,244,0.22172619047619047) 0%, rgba(
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">게시글 입력</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <form>
         <table class="table table-bordered">
-        <thead>
-        <h2>게시글</h2>
         <tbody>
         <tr>
         <td>작성자</td>
         <td>
-        <input type="text" style="border: none; "name="m_name" value="${userName }" readonly="readonly">
+        <input type="text" class="modal_table" name="m_name" value="${userName }" readonly="readonly">
         </td>
         </tr>
         <tr>
         <td>제목</td>
         <td>
-        <input type="text" name="">
+        <input type="text" class="modal_table" name="">
         </td>
         </tr>
         <tr>
         <td>zz</td>
-        <td>zzz</td>
+        <td><input type="text" class="modal_table" name=""></td>
         </tr>
         <tr>
         <td>zz</td>
-        <td>zzz</td>
+        <td><textarea rows="10" cols="46"></textarea></td>
         </tr>
         </tbody>
         </table>
