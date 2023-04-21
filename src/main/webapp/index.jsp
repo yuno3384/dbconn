@@ -16,7 +16,7 @@
 }
 #div8{
 	background: rgb(5,208,244);
-background: linear-gradient(90deg, rgba(5,208,244,0.22172619047619047) 0%, rgba(0,212,255,1) 100%);
+	background: linear-gradient(90deg, rgba(5,208,244,0.22172619047619047) 0%, rgba(0,212,255,1) 100%);
 }
 #calendar{
 	width: 30%;
@@ -28,11 +28,7 @@ background: linear-gradient(90deg, rgba(5,208,244,0.22172619047619047) 0%, rgba(
 .mt-65{
 	margin-top: 4.5em !important;
 }
-.modal_table{
-	border: none;
-	position: absolute;
-    left: 6em;
-}
+
 .editBtn{
 	position: absolute;
     right: 30%;
@@ -40,8 +36,7 @@ background: linear-gradient(90deg, rgba(5,208,244,0.22172619047619047) 0%, rgba(
 }
 table#notice{
 	margin-top: 60px;
-	width : 700px;
-	
+
 }
 </style>
 </head>
@@ -86,9 +81,9 @@ table#notice{
 			<table id="notice" class="bg-secondary table table-bordered">
 			<thead>
 			<tr>
-			<td class="col-sm-4">번호</td>
-			<td class="col-sm-4">이름</td>
-			<td class="col-sm-4">저자</td>
+			<td class="col-sm-2">번호</td>
+			<td class="col-sm-2">이름</td>
+			<td class="col-sm-2">저자</td>
 <!-- 			<td></td> -->
 			</tr>
 			
