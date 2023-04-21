@@ -78,24 +78,26 @@ table#notice{
 
 <jsp:include page="savemodal.jsp"></jsp:include>
 			<div class="mt-5 ms-3 col-sm-5 ">
-			<table id="notice" class="bg-secondary table table-bordered">
+			<table class="bg-secondary table table-bordered">
 			<thead>
 			<tr>
 			<td class="col-sm-2">번호</td>
 			<td class="col-sm-2">이름</td>
-			<td class="col-sm-2">저자</td>
-<!-- 			<td></td> -->
 			</tr>
-			
 			</table>
 			</div>
-			
-			
-					
+			<div class="position-relative top-0 start-50 col-sm-5 ">
+			<table class="bg-primary table table-bordered">
+			<thead>
+			<tr>
+			<td class="col-sm-2">번호</td>
+			<td class="col-sm-2">이름</td>
+			</tr>
+			</table>
 			</div>		
+			</div>
 			
 			<div id="div5" class="mt-3 ms-3 col-sm-3 bg-secondary bg-gradient text-white">sjjdjfd</div>
-			
 			<div id="div6" class="mt-3 ms-3 col-sm-3 bg-info bg-gradient text-white">sjjdj</div>
 			<div id="div7" class="mt-3 col-sm-3 bg-warning bg-grient text-body">sjjdjfdkj</div>		
 			<div id="div8" class="mt-3 col-sm-3">sjjdjfdk</div>		
