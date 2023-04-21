@@ -80,56 +80,8 @@ table#notice{
 			<button id="insertBoard" type="button" class="btn btn-primary editBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">
   				게시글 작성
 			</button>
-		
-			<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">게시글 입력</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form>
-        <table class="table table-bordered">
-        <thead>
-        <tr class="mt-2" style="display: none">
-        <td>게시물 id</td>
-        <td>
-        <input type="hidden" name="b_id">
-        </td>
-        </tr>
-        <tbody>
-        <tr>
-        <td>작성자</td>
-        <td>
-        <input type="text" class="modal_table" name="m_name" value="${userName }" readonly="readonly">
-        </td>
-        </tr>
-        <tr>
-        <td>제목</td>
-        <td>
-        <input type="text" class="modal_table" name="b_title">
-        </td>
-        </tr>
-        <tr>
-        <td style="padding-right:0px;">비밀번호 </td>
-        <td><input type="password" class="modal_table" name="b_pwd"></td>
-        </tr>
-        <tr>
-        <td>내용</td>
-        <td><textarea name="b_content" rows="9" cols="46"></textarea></td>
-        </tr>
-        </tbody>
-        </table>
-        </form>
-      </div>
-      <div class="modal-footer">
-<!--         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
-        <button type="button" class="btn btn-primary">저장</button>
-      </div>
-    </div>
-  </div>
-</div>
+
+<jsp:include page="savemodal.jsp"></jsp:include>
 			<div class="mt-5 ms-3 col-sm-5 ">
 			<table id="notice" class="bg-secondary table table-bordered">
 			<thead>
