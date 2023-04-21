@@ -39,7 +39,7 @@ background: linear-gradient(90deg, rgba(5,208,244,0.22172619047619047) 0%, rgba(
 
 }
 table#notice{
-
+	margin-top: 60px;
 	width : 700px;
 	
 }
@@ -92,7 +92,7 @@ table#notice{
         <form>
         <table class="table table-bordered">
         <thead>
-        <tr style="display: none">
+        <tr class="mt-2" style="display: none">
         <td>게시물 id</td>
         <td>
         <input type="hidden" name="b_id">
@@ -112,12 +112,12 @@ table#notice{
         </td>
         </tr>
         <tr>
-        <td>비밀번호</td>
+        <td style="padding-right:0px;">비밀번호 </td>
         <td><input type="password" class="modal_table" name="b_pwd"></td>
         </tr>
         <tr>
         <td>내용</td>
-        <td><textarea name="b_content" rows="10" cols="46"></textarea></td>
+        <td><textarea name="b_content" rows="9" cols="46"></textarea></td>
         </tr>
         </tbody>
         </table>
@@ -131,7 +131,7 @@ table#notice{
   </div>
 </div>
 			<div class="mt-5 ms-3 col-sm-5 ">
-			<table id="notice" class="mt-5 bg-secondary table table-bordered">
+			<table id="notice" class="bg-secondary table table-bordered">
 			<thead>
 			<tr>
 			<td class="col-sm-4">번호</td>

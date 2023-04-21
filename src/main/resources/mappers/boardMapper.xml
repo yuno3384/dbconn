@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="MemberDAO"> 
+<!-- 회원 추가 : 파라미터 필요 타입(VO)  -->
+<insert id="insertMember" parameterType="member"> 
+	INSERT INTO members (m_no,m_email,m_pwd,m_name,m_birthday) 
+	 VALUES (('m00000'||members_mno_seq.nextval),#{m_email},#{m_pwd},#{m_name},#{m_birthday})
+</insert> 
+<!-- 로그인 : 파라미터 필요 : VO 결과값 필요 : VO 
+	 id중복여부 : 파라미터 필요 : VO 결과값 필요 : VO
+-->
+<select id="checkMember" parameterType="member" resultType="member">
+	SELECT m_email,m_pwd,m_name,m_birthday 
+	 FROM members
+	WHERE m_email = #{m_email}
+	<if test="m_pwd != null">
+	  AND m_pwd = #{m_pwd} 
+	</if>
+</select>
+<!-- 전회원 조회 : 파라미터 필요 : VO 결과값 필요 : VO -->
+
+<!-- 회원 변경  :  파라미터 필요 : VO 결과값 필요 : VO -->
+
+<!-- 회원 삭제 : 파리미터 필요 : VO  -->
+
+
+
+</mapper>  
