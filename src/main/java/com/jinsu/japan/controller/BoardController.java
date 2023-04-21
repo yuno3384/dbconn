@@ -22,6 +22,6 @@ public class BoardController {
 	public String saveBoard(BoardVO vo) {
 		System.out.println("게시물 제목 :"+vo.getB_title() );
 		
-		return "";
+		return "../../index";
 	}
 }

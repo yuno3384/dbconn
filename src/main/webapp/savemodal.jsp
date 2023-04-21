@@ -54,13 +54,6 @@ $(function() {
       <div class="modal-body">
         <form id="save" action="saveBoard.do" method="get">
         <table class="table table-bordered">
-        <thead>
-        <tr class="mt-2" style="display: none">
-        <td>게시물 id</td>
-        <td>
-        <input type="hidden" name="b_id">
-        </td>
-        </tr>
         <tbody>
         <tr>
         <td>작성자</td>
