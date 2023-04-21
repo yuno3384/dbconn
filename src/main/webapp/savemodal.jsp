@@ -37,17 +37,8 @@ table#notice{
 $(function() {
 	
 	$("#modal_submit").click(function() {
-		$("#board").submit();
+		$("#save").submit();
 	})
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 })
 </script>
@@ -61,7 +52,7 @@ $(function() {
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form id="board" action="saveBoard.do" method="get">
+        <form id="save" action="saveBoard.do" method="get">
         <table class="table table-bordered">
         <thead>
         <tr class="mt-2" style="display: none">
