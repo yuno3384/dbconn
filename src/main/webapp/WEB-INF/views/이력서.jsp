@@ -191,32 +191,8 @@
                     <td>취업훈련</td>
                     <td>휴먼교육센터</td>
                     <td><strong>(산대특)</strong>공공데이터플랫폼을 활용한 빅데이터 분석전문가 과정에서 Java/JavaScript/HTML5,CSS3/SQL을 비롯해 
-                        <br>Spring FrameWork와 lombok을 통한 getter,setter의 축약 및 <br> mybatis를 통한 오라클 SQL에 대한 전반적인 교육 및 프로젝트를 다수 실행함</td>
+                        <br>Spring FrameWork를 통한 MVC모델의 이해와 lombok을 통한 getter,setter의 축약 및 <br> mybatis를 통한 오라클 SQL에 대한 전반적인 교육 및 프로젝트를 다수 실행함</td>
                 </tr>
-                <!-- <tr style="color: #333333">
-                    <td>기간</td>
-                    <td>구분</td>
-                    <td>기관/장소</td>
-                    <td>내용</td>
-                </tr>
-                <tr style="color: #333333">
-                    <td>기간</td>
-                    <td>구분</td>
-                    <td>기관/장소</td>
-                    <td>내용</td>
-                </tr>
-                <tr style="color: #333333">
-                    <td>기간</td>
-                    <td>구분</td>
-                    <td>기관/장소</td>
-                    <td>내용</td>
-                </tr>
-                <tr style="color: #333333">
-                    <td>기간</td>
-                    <td>구분</td>
-                    <td>기관/장소</td>
-                    <td>내용</td>
-                </tr> -->
 
                 </table>
 
@@ -281,7 +257,7 @@
                                 </div>
                            </li>
                             <li class="mt-2">
-                                <div class="ms-2 fw-bold">JavaScript(ES5)/jQuery/Json/Ajax/jackson<br>
+                                <div class="ms-2 fw-bold">JavaScript(ES5)/jQuery/JSON/Ajax/jackson<br>
                                     <ol id="tech1">
                                         <li>JavaScript를 이용하여 WOM/DOM을 조작할 수 있음 </li>
                                         <li>jQuery의 메소드를 이용하여 WOM/DOM을 조작할 수 있음</li>
@@ -331,18 +307,83 @@
         </table>
     </td>
 </tr>
+    <td style="border-bottom: 2px solid #333333;">
+        <div class="mt-3 fs-5 fw-bold" style="color : #333333;">
+            포트폴리오/기타문서
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>
+        <table class="table table-bordered text-center fw-bold">
+        <tr style="color: #333333">
+            <td>파일구분</td>            
+            <td> 파일명 </td>
+        </tr>
+        <tr style="color: #333333">
+            <td>포트폴리오</td>            
+            <td class="text-start ps-3"> 
+         sdkfkfkgkgf <br>
+                ddkdlfdld
+            </td>
+        </tr>
+        </table>
+    </td>
+</tr>
+    <td style="border-bottom: 2px solid #333333;">
+        <div class="mt-3 fs-5 fw-bold" style="color : #333333;">
+            포트폴리오/기타문서
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>
+        <table class="table table-borderless text-center fw-bold">
+        <tr style="color: #333333">
+        <td>자기소개서</td>            
+        </tr>
+        <tr> 
+        <td class="text-start ps-3 pt-3"> 
+         [성장과정]
+         <div class="pt-2">
+            학원을 다닐 형편이 되지 못한 집안이었지만, 어렸을때부터 어학에 눈을 떠서 일본어,영어를 공부하며 새로운 언어들에 대한 호기심을 가지고 살았습니다.
+            그러던 어느날 HTML이라는 것을 알게되었습니다. &lt;&gt; 이라는 모양을 가진 무언가 뒤에 문자를 넣으면 웹사이트를 만들수 있다. 이것으로 내가 지금까지 배웠던 일본어를 적어둬야 겠다.
+            하며 저는 HTML로 사이트를 만들었었습니다. 비록 너무 색이 진하고 글씨만 가득 찬 웹사이트였지만 직접 완성했다는 마음에 뿌듯함을 감출 수 없엇습니다. 이것이 17년이 지난 지금도 눈에 생생합니다. 
+            그리고 이러한 일이 저를 프로그래밍에 흥미를 갖게 하였습니다. '아, 언젠간 꼭 컴퓨터를 공부해야겠다.'
+            그러던 와중 서점을 들린 어느날 한 권의 책이 눈에 들어왔습니다. 책 제목은 '그림으로 쉽게 배우는 C++'. 그것이 제가 프로그래밍과 처음 만난 날이었습니다.
+         </div>
+        </td>
+        </tr>
+        <tr>
+        <td class="text-start ps-3 pt-3"> 
+         [성격의 장단점/ 대인관계]
+         <div class="pt-2">
+            저는 항상 빨리 배우고 빨리 적응한다는 점에 자신이 있습니다. 어렸을때 부터 선생님 말씀에 귀를 기울이고 열심히 복습을 하고 숙제는 밤을 새서라도 해서 가던 성격이었습니다. 이러한 성격이 이번 교육에서도 빛을 발한 것이 바로 포기하지 않고 기필코 기능을 구현해 낸다는 끈질긴 마음이었습니다.
+            에러가 발생하면 캡쳐를 하고 반드시 검색을 해보고, 현재 짠 나의 코드의 흐름상에 강사님이 가르쳐주신 순서, 또는 실행한 방식과 다르지 않은가 를 고민하고 또 고민하였습니다.
+            또한 밤을 새는 직업을 했었던 터라 밤을 새는 일은 저에게 문제가 되지 않습니다. 하지만 이러한 성격의 단점이라 하면 자신의 건강을 잘 신경쓰지 못한다는 점이었습니다. 이를 보완하기 위해 비타민과 병원에서 받은 약을 먹으며 건강을 챙기려 노력하고 있습니다.
+            저는 얘기를 잘 들어주려 노력하는 타입입니다. 언제나 배우려는 자세로 협의를 해나가며 그 목표를 해내기위해 노력했습니다.
+        </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="text-start ps-3 pt-3"> 
+         [지원동기]
+         <div class="pt-2">
+            20대에 일을 안한것은 아니었습니다. 다만 저의 꿈과 동떨어진 일을 하고 있어서 회의감이 많이 들었고 이번에 이런 귀한 기회를 얻게 되었음에 이것을 사회에 공헌하여 힘을 쓰고 싶었습니다.
+            기러던 와중 귀사에서 귀한 기회에 찾아와서 무한한 영광이라 생각합니다. 
+        </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="text-start ps-3 pt-3"> 
+         [입사 후 포부]
+             입사 후 현 회사에서 원하는 인재상이 되기 위해 우선, 코드를 파악하여 제가 해야할 위치에 걸맞는 업무를 부여받아 그 프로젝트에 누를 끼치지 않기 위해 밤을 새서라도 필요한 언어, 로직 등을 공부하여 회사에 공헌하기 위해 노력하겠습니다.
+            </td>
+        </tr>
 
-
-
-
-
-
-
-
-
-
-
-
+        </table>
+    </td>
+</tr>
         </tbody>
     </table>
     </body>
