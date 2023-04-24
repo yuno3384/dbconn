@@ -39,32 +39,32 @@ background: linear-gradient(90deg, rgba(5,208,244,0.22172619047619047) 0%, rgba(
 	<h4>Link</h4>
 	<div class="row">
 		<div id="div21" class="mt-3 row-sm-2 em-5 text-body">
-		<a class="fs-1 taxt-danger  text-decoration-none " href= "https://dictionary.goo.ne.jp/">
+		<a class="fs-1 taxt-danger  text-decoration-none " href= "https://dictionary.goo.ne.jp/" target="_blank">
 		<img alt="goo 辞書" src="resources/dictionary_goo.png" style="width: 40%; height:90%;" />
 		</a>
 		</div>	
 		<div id="div21" class="mt-3 row-sm-2 em-5 text-body">
-		<a class="fs-1 taxt-danger  text-decoration-none " href= "https://kotobank.jp/">
+		<a class="fs-1 taxt-danger  text-decoration-none " href= "https://kotobank.jp/" target="_blank">
 		<img alt="コトバンク" src="resources/dictionary_kotobank.png" style="width: 70%; height:90%;" />
 		</a>
 		</div>	
 		<div id="div21" class="mt-3 row-sm-2 em-5 text-body">
-		<a class="fs-1 taxt-danger  text-decoration-none " href= "https://www.yahoo.co.jp/">
+		<a class="fs-1 taxt-danger  text-decoration-none " href= "https://www.yahoo.co.jp/" target="_blank">
 		<img alt="ヤフー ジャパン" src="resources/Yahoo_Japan.png" style="width: 80%; height:70%;" />
 		</a>
 		</div>	
 		<div id="div21" class="mt-3 row-sm-2 em-5 text-body">
-		<a class="fs-1 taxt-danger  text-decoration-none " href= "https://www.jlpt.or.kr/main/main2.asp">
+		<a class="fs-1 taxt-danger  text-decoration-none " href= "https://www.jlpt.or.kr/main/main2.asp" target="_blank">
 		<img alt="日本語能力試験 JLPT" src="resources/jlpt.jpg" style="width: 80%; height:70%;" />
 		</a>
 		</div>	
 		<div id="div21" class="mt-3 row-sm-2 em-5 text-body">
-		<a class="fs-1 taxt-danger  text-decoration-none " href= "https://blog.naver.com/japansisa/">
+		<a class="fs-1 taxt-danger  text-decoration-none " href= "https://blog.naver.com/japansisa/" target="_blank">
 		<img alt="시사일본어사 블로그" src="resources/sisa.png" style="width: 90%; height:60%;" />
 		</a>
 		</div>	
 		<div id="div21" class="mt-3 row-sm-2 em-5 text-body">			
-		<a class="fs-1 taxt-danger  text-decoration-none " href= "https://www.nhk.or.jp/kokokoza/">
+		<a class="fs-1 taxt-danger  text-decoration-none " href= "https://www.nhk.or.jp/kokokoza/" target="_blank">
 		<img alt="NHK 高校講座" src="resources/NHK.svg" style="width: 80%; height:70%;" />
 		</a>
 		</div>	

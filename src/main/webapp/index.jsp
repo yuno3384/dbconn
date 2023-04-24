@@ -31,12 +31,20 @@
 
 .editBtn{
 	position: absolute;
-    right: 30%;
+    right: 20%;
 
 }
 table#notice{
 	margin-top: 60px;
 
+}
+.position-relative_top-0{
+	position: relative;
+	top: -10.6em;
+}
+.start-50{
+	position: relative;
+	left: 50%;
 }
 </style>
 </head>
@@ -70,7 +78,7 @@ table#notice{
       
     </script>
 <jsp:include page="link.jsp"></jsp:include>
-			<div id="div3" class="mt-3 ms-3 col-sm-7 bg-danger bg-grient text-body">
+			<div id="div3" class="mt-3 ms-3 col-sm-7 bg-secondary bg-grient text-body">
 			<h2>게시판</h2>
 			<button id="insertBoard" type="button" class="btn btn-primary editBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">
   				게시글 작성
@@ -78,24 +86,76 @@ table#notice{
 
 <jsp:include page="savemodal.jsp"></jsp:include>
 			<div class="mt-5 ms-3 col-sm-5 ">
-			<table class="bg-secondary table table-bordered">
-			<thead>
+			<table class="bg-success table table-bordered">
 			<tr>
-			<td class="col-sm-2">번호</td>
+			<td class="col-sm-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate elit in tellus commodo</td>
+			</tr>
+			<tr>
 			<td class="col-sm-2">이름</td>
 			</tr>
 			</table>
 			</div>
-			<div class="position-relative top-0 start-50 col-sm-5 ">
+			<div class="position-relative_top-0 start-50 col-sm-5 ">
 			<table class="bg-primary table table-bordered">
-			<thead>
 			<tr>
-			<td class="col-sm-2">번호</td>
+			<td class="col-sm-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate elit in tellus commodo</td>
+			</tr>
+			<tr>
 			<td class="col-sm-2">이름</td>
 			</tr>
 			</table>
-			</div>		
 			</div>
+			<div class="ms-3 col-sm-5 ">
+			<table class="bg-primary table table-bordered">
+			<tr>
+			<td class="col-sm-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate elit in tellus commodo</td>
+			</tr>
+			<tr>
+			<td class="col-sm-2">이름</td>
+			</tr>
+			</table>
+			</div>	
+			<div class="position-relative_top-0 start-50 col-sm-5 ">
+			<table class="bg-primary table table-bordered">
+			<tr>
+			<td class="col-sm-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate elit in tellus commodo</td>
+			</tr>
+			<tr>
+			<td class="col-sm-2">이름</td>
+			</tr>
+			</table>
+			</div>
+			<div class="ms-3 col-sm-5 ">
+			<table class="bg-primary table table-bordered">
+			<tr>
+			<td class="col-sm-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate elit in tellus commodo</td>
+			</tr>
+			<tr>
+			<td class="col-sm-2">이름</td>
+			</tr>
+			</table>
+			</div>	
+			<div class="position-relative_top-0_start-50 col-sm-5 ">
+			<table class="bg-primary table table-bordered">
+			<tr>
+			<td class="col-sm-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate elit in tellus commodo</td>
+			</tr>
+			<tr>
+			<td class="col-sm-2">이름</td>
+			</tr>
+			</table>
+			</div>
+			
+			
+			
+			
+			
+						
+			</div>
+				
+			
+				
+
 			
 			<div id="div5" class="mt-3 ms-3 col-sm-3 bg-secondary bg-gradient text-white">sjjdjfd</div>
 			<div id="div6" class="mt-3 ms-3 col-sm-3 bg-info bg-gradient text-white">sjjdj</div>
