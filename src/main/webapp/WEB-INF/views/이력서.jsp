@@ -321,8 +321,7 @@
         <tr style="color: #333333">
             <td>포트폴리오</td>            
             <td class="text-start ps-3"> 
-         sdkfkfkgkgf <br>
-                ddkdlfdld
+        
             </td>
         </tr>
         </table>
@@ -330,7 +329,7 @@
 </tr>
     <td style="border-bottom: 2px solid #333333;">
         <div class="mt-3 fs-5 fw-bold" style="color : #333333;">
-            포트폴리오/기타문서
+            자기소개서
         </div>
     </td>
 </tr>
