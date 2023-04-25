@@ -86,7 +86,23 @@ $(function() {
 
         $('#summernote').summernote(setting);
 
-	
+        function uploadSummernoteImageFile(file, el) {
+			data = new FormData();
+			data.append("file", file);
+			$.ajax({
+				data : data,
+				type : "POST",
+				url : "uploadmageFile.do",
+				contentType : false,
+				enctype : 'multipart/form-data',
+				processData : false,
+				success : function(data) {
+					$(el).summernote('editor.insertImage', data.url);
+				}
+			});
+		}
+        
+        
 	$("#modal_submit").click(function() {
 		$("#save").submit();
 	});

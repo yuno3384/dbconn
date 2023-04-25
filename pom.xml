@@ -169,18 +169,25 @@
 		    <version>1.18.24</version>
 		    <scope>provided</scope>
 		</dependency>
-		 <!-- jackson : xml,csv,json을 변환 시켜주는 객체  -->
+<!-- 		 jackson : xml,csv,json을 변환 시켜주는 객체  -->
       <dependency>
          <groupId>com.fasterxml.jackson.core</groupId>
          <artifactId>jackson-core</artifactId>
          <version>2.9.2</version>
       </dependency>
-      <!-- jackson-core -->
+<!--       jackson-core -->
       <dependency>
           <groupId>com.fasterxml.jackson.core</groupId>
           <artifactId>jackson-databind</artifactId>
           <version>2.9.2</version>
       </dependency>
+ <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+          <!-- json 변환 -->
+          <dependency>
+              <groupId>com.google.code.gson</groupId>
+              <artifactId>gson</artifactId>
+              <version>2.8.6</version>
+          </dependency>
       <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
           <!-- 대용량 파일 처리 -->
           <dependency>
