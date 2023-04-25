@@ -10,6 +10,7 @@ public class BoardVO {
 	private String b_title;				// 게시글 제목
 	private String b_content;			// 게시글 내용
 	private String b_pwd;				// 게시글 수정과 삭제 목적의 비밀번호
+	private String b_date;				// 게시글 게재 날짜
 
 	
 	

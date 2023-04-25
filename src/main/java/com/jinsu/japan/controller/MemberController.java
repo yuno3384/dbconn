@@ -54,8 +54,8 @@ public class MemberController {
 		if(result == null) {
 			return "redirect:/login.do";
 		}else {
-			System.out.println("userId :"+result.getM_email());
-			System.out.println("userName :"+result.getM_name());
+//			System.out.println("userId :"+result.getM_email());
+//			System.out.println("userName :"+result.getM_name());
 			
 			session.setAttribute("userId", result.getM_email());
 			session.setAttribute("userName", result.getM_name());

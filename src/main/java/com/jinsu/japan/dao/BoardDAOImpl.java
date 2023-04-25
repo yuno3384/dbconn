@@ -21,8 +21,7 @@ public class BoardDAOImpl implements BoardService{
 
 	@Override
 	public int insertBoard(BoardVO vo) {
-		// TODO Auto-generated method stub
-		return 0;
+		return mybatis.insert("BoardDAO.insertBoard",vo);
 	}
 
 	@Override
@@ -32,13 +31,13 @@ public class BoardDAOImpl implements BoardService{
 	}
 
 	@Override
-	public int updateMember(BoardVO vo) {
+	public int updateBoard(BoardVO vo) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public int deleteMember(BoardVO vo) {
+	public int deleteBoard(BoardVO vo) {
 		// TODO Auto-generated method stub
 		return 0;
 	}

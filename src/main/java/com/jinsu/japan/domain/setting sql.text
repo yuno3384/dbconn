@@ -17,7 +17,7 @@ CREATE TABLE boards(
 	b_title VARCHAR2(100),			
 	b_content VARCHAR2(100),			
 	b_pwd VARCHAR2(100)
-	
+	b_date DATE
 );
 
 CREATE SEQUENCE boards_bid_seq;

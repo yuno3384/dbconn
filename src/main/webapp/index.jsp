@@ -9,7 +9,12 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/index.global.min.js"></script>
+
 <style type="text/css">
+
+#div3{
+	height: 40em;
+}
 #div4{
 	background: rgb(2,0,36);
 	background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(117,121,9,1) 34%, rgba(64,163,121,1) 64%, rgba(48,175,154,1) 73%, rgba(23,194,206,1) 87%, rgba(14,201,225,1) 92%, rgba(5,208,244,1) 97%, rgba(0,212,255,1) 100%);
@@ -29,10 +34,9 @@
 	margin-top: 4.5em !important;
 }
 
-.editBtn{
+button.editBtn{
 	position: absolute;
     right: 20%;
-
 }
 table#notice{
 	margin-top: 60px;
@@ -42,9 +46,21 @@ table#notice{
 	position: relative;
 	top: -10.6em;
 }
-.start-50{
+.position-relative_top-10{
 	position: relative;
-	left: 50%;
+	top: -10.6em;
+}
+.position-relative_top-20{
+	position: relative;
+	top: -21.2em;
+}
+.position-relative_top-30{
+	position: relative;
+	top: -31.5em;
+}
+.start-55{
+	position: relative;
+	left: 55%
 }
 </style>
 </head>
@@ -95,7 +111,7 @@ table#notice{
 			</tr>
 			</table>
 			</div>
-			<div class="position-relative_top-0 start-50 col-sm-5 ">
+			<div class="position-relative_top-0 start-55 col-sm-5 ">
 			<table class="bg-primary table table-bordered">
 			<tr>
 			<td class="col-sm-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate elit in tellus commodo</td>
@@ -105,7 +121,7 @@ table#notice{
 			</tr>
 			</table>
 			</div>
-			<div class="ms-3 col-sm-5 ">
+			<div class="ms-3 position-relative_top-10  col-sm-5 ">
 			<table class="bg-primary table table-bordered">
 			<tr>
 			<td class="col-sm-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate elit in tellus commodo</td>
@@ -115,7 +131,7 @@ table#notice{
 			</tr>
 			</table>
 			</div>	
-			<div class="position-relative_top-0 start-50 col-sm-5 ">
+			<div class="position-relative_top-20 start-55 col-sm-5 ">
 			<table class="bg-primary table table-bordered">
 			<tr>
 			<td class="col-sm-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate elit in tellus commodo</td>
@@ -125,7 +141,7 @@ table#notice{
 			</tr>
 			</table>
 			</div>
-			<div class="ms-3 col-sm-5 ">
+			<div class="position-relative_top-20 ms-3 col-sm-5 ">
 			<table class="bg-primary table table-bordered">
 			<tr>
 			<td class="col-sm-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate elit in tellus commodo</td>
@@ -135,7 +151,7 @@ table#notice{
 			</tr>
 			</table>
 			</div>	
-			<div class="position-relative_top-0_start-50 col-sm-5 ">
+			<div class="position-relative_top-30 start-55 col-sm-5 ">
 			<table class="bg-primary table table-bordered">
 			<tr>
 			<td class="col-sm-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate elit in tellus commodo</td>
@@ -157,7 +173,7 @@ table#notice{
 				
 
 			
-			<div id="div5" class="mt-3 ms-3 col-sm-3 bg-secondary bg-gradient text-white">sjjdjfd</div>
+			<div id="div5" class="mt-3 ms-3 col-sm-3 bg-secondary bg-gradient text-white">단어장</div>
 			<div id="div6" class="mt-3 ms-3 col-sm-3 bg-info bg-gradient text-white">sjjdj</div>
 			<div id="div7" class="mt-3 col-sm-3 bg-warning bg-grient text-body">sjjdjfdkj</div>		
 			<div id="div8" class="mt-3 col-sm-3">sjjdjfdk</div>		

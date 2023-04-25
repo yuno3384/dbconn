@@ -9,7 +9,11 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/index.global.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+
 <style type="text/css">
+
 
 .em-5{
 	height: 5em;
@@ -35,6 +39,12 @@ table#notice{
 </style>
 <script type="text/javascript">
 $(function() {
+	
+	 $('#summernote').summernote({
+	        placeholder: 'Hello Bootstrap 5',
+	        tabsize: 4,
+	        height: 200
+	      });
 	
 	$("#modal_submit").click(function() {
 		$("#save").submit();
@@ -73,7 +83,8 @@ $(function() {
         </tr>
         <tr>
         <td>내용</td>
-        <td><textarea name="b_content" rows="9" cols="46"></textarea></td>
+        <td><textarea id="summernote" name="b_content"></textarea></td>
+       
         </tr>
         </tbody>
         </table>
