@@ -5,13 +5,14 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/index.global.min.js"></script>
-<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
-
+  <!-- include libraries(jQuery, bootstrap) -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+ <!-- 서머노트를 위해 추가해야할 부분 -->
+  <script src="${pageContext.request.contextPath}/resources/summernote/summernote-lite.min.js"></script>
+  <script src="${pageContext.request.contextPath}/resources/summernote/lang/summernote-ko-KR.js"></script>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/summernote/summernote-lite.min.css">
+  <!--  -->
 <style type="text/css">
 
 
@@ -40,15 +41,52 @@ table#notice{
 <script type="text/javascript">
 $(function() {
 	
-	 $('#summernote').summernote({
-	        placeholder: 'Hello Bootstrap 5',
-	        tabsize: 4,
-	        height: 200
-	      });
+	var toolbar =[
+		// 글꼴 설정
+	    ['fontname', ['fontname']],
+	    // 글자 크기 설정
+	    ['fontsize', ['fontsize']],
+	    // 굵기, 기울임꼴, 밑줄,취소 선, 서식지우기
+	    ['style', ['bold', 'italic', 'underline','strikethrough', 'clear']],
+	    // 글자색
+	    ['color', ['forecolor','color']],
+	    // 표만들기
+	    ['table', ['table']],
+	    // 글머리 기호, 번호매기기, 문단정렬
+	    ['para', ['ul', 'ol', 'paragraph']],
+	    // 줄간격
+	    ['height', ['height']],
+	    // 그림첨부, 링크만들기, 동영상첨부
+	    ['insert',['picture','link','video']],
+	    // 코드보기, 확대해서보기, 도움말
+	    ['view', ['codeview','fullscreen', 'help']]
+
+	];
+	 
+	var setting = {
+            height : 300,
+            minHeight : null,
+            maxHeight : null,
+            focus : true,
+            lang : 'ko-KR',
+            toolbar : toolbar,
+            callbacks : { //여기 부분이 이미지를 첨부하는 부분
+            onImageUpload : function(files, editor,
+            welEditable) {
+            for (var i = files.length - 1; i >= 0; i--) {
+            uploadSummernoteImageFile(files[i],
+            this);
+            		}
+            	}
+            }
+         };
+
+        $('#summernote').summernote(setting);
+
 	
 	$("#modal_submit").click(function() {
 		$("#save").submit();
-	})
+	});
 	
 })
 </script>
@@ -62,7 +100,7 @@ $(function() {
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form id="save" action="saveBoard.do" method="get">
+        <form id="save" action="saveBoard.do" method="post" enctype="multipart/form-data">
         <table class="table table-bordered">
         <tbody>
         <tr>
@@ -83,7 +121,7 @@ $(function() {
         </tr>
         <tr>
         <td>내용</td>
-        <td><textarea id="summernote" name="b_content"></textarea></td>
+        <td class="text-start"><textarea id="summernote" name="b_content" ></textarea></td>
        
         </tr>
         </tbody>
