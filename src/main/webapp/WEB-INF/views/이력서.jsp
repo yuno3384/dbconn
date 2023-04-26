@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +11,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </head>
 <style type="text/css">
+    @import url(//fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
+
+    .nanumgothiccoding * {
+     font-family: 'Nanum Gothic Coding', monospace;
+    }
    .techs{
         list-style-image: url(battery-half.svg)
    }
@@ -16,7 +23,17 @@
         list-style-image: none;
         list-style-type: disc;
    }
-   
+   a{
+    color: black;
+    text-decoration: none;
+   }
+   a:hover{
+    color: black;
+    text-decoration: none;
+   }
+   a:active{
+    color: black;
+   }
 </style>
 <body>
     <table class="table table-sm table-borderless">
@@ -30,11 +47,13 @@
         <tbody>
         <tr>
             <td>
+                <div style="float: right;">
+                <img src="FirstView.jpg"/>
+                </div>
             </td>
         </tr>
             <tr>
-                <td>
-                </td>
+                <td></td>
             </tr>
             <tr>
                 <td>  
@@ -50,10 +69,6 @@
             </tr>
             <tr>
                 <td>  
-                </td>
-            </tr>
-            <tr>
-                <td>
                 </td>
             </tr>
             <tr>
@@ -99,6 +114,95 @@
             <tr>
                 <td>  
                 </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>  
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>  
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>  
+                </td>
+            </tr>
+            <tr class="d-flex" style= "width: 40;">
+                <td class="pe-2" style="border-right: 0.5px solid #999;">이름</td>
+                <td class="pe-5">최진수</td>
+                <td class="pe-2" style="border-right: 0.5px solid #999;">휴대폰</td>
+                <td class="pe-5">010-4897-0624</td>
+                <td class="pe-2" style="border-right: 0.5px solid #999;">이메일</td>
+                <td class="pe-5">yuno3384@gmail.com</td>
+            </tr>
+            <tr class="pt-3 d-flex" style= "width: 40;">
+                <td class="pe-2" style="border-right: 0.5px solid #999;">성별</td>
+                <td class="pe-5">남자</td>
+                <td class="pe-2" style="border-right: 0.5px solid #999;">홈페이지</td>
+                <td class="pe-5">
+                    <a href="https://github.com/yuno3384/dbconn">https://github.com/yuno3384/dbconn</a>
+                </td>
+            </tr>
+            <tr class="pt-3 d-flex" style= "width: 40;">
+                <td class="pe-2" style="border-right: 0.5px solid #999;">주소</td>
+                <td class="pe-5">경기도 의왕시 전주남이길 5-2 (오전동, 덕암빌라)</td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td style="border-bottom: 2px solid #333333;">
+                <div class="mt-3 fs-5 fw-bold" style="color : #333333;">
+                학력
+                </div>
+            </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="table table-borderless text-center" style="color: #333333">
+                    <tr>
+                        <td></td>
+                        <td>기간</td>
+                        <td>학교명</td>
+                        <td>위치</td>
+                    </tr>
+                    <tr>
+                        <td>고등학교 졸업</td>
+                        <td>2011.02</td>
+                        <td>양명고등학교</td>
+                        <td>안양시</td>
+                    </tr>
+    
+                    </table>
+    
+                </td>
+            </tr>
+            <tr>
+                <td>  
+                </td>
             </tr>   
             <tr>
                 <td>
@@ -106,58 +210,6 @@
             </tr>
             <tr>
                 <td>
-                </td>
-            </tr>
-            <tr>
-                <td>  
-                </td>
-            </tr>
-            <tr>
-                <td>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                </td>
-            </tr>
-            <tr>
-                <td>  
-                </td>
-            </tr>
-            <tr>
-                <td>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                </td>
-            </tr>
-            <tr>
-                <td>  
-                </td>
-            </tr>
-            <tr>
-                <td>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                </td>
-            </tr>
-            <tr>
-                <td>  
-                </td>
-            </tr>
-            <tr>
-                <td>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                </td>
-            </tr>
-            <tr>
-                <td>  
                 </td>
             </tr>
         <tr style="border-bottom: 3px solid grey;">
@@ -196,7 +248,8 @@
 
             </td>
         </tr>
-      
+
+      <tr>
         <td style="border-bottom: 2px solid #333333;">
             <div class="mt-3 fs-5 fw-bold" style="color : #333333;">
                 자격증/어학/수상내역
