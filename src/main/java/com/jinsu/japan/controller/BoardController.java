@@ -35,7 +35,7 @@ public class BoardController {
 	// ------------------- 특수 전송용 -----------
 	
 	@RequestMapping(value="saveBoard.do")
-	public String saveBoard(BoardVO vo,HttpSession session, Model model) {
+	public String saveBoard(BoardVO vo,HttpSession session) {
 		System.out.println("게시물 제목 :"+vo.getB_title() );
 		vo.setB_writer((String)session.getAttribute("userName"));
 		System.out.println("게시자명 :"+vo.getB_writer() );
@@ -45,13 +45,13 @@ public class BoardController {
 		vo.setB_content(content);
 		
 		int result = boardService.insertBoard(vo);
-		model.addAttribute("result",result);
+		
 		return "../../index";
 	}
 	
 	@RequestMapping(value="/uploadSummernoteImageFile", produces = "application/json; charset=utf8")
 	@ResponseBody
-	public String uploadSummernoteImageFile(@RequestParam("file") MultipartFile multipartFile, HttpServletRequest request )  {
+	public String uploadSummernoteImageFile(@RequestParam("file")BoardVO vo , MultipartFile multipartFile, HttpServletRequest request )  {
 		JsonObject jsonObject = new JsonObject();
 		
         /*
@@ -62,9 +62,11 @@ public class BoardController {
 		String contextRoot = new HttpServletRequestWrapper(request).getRealPath("/");
 		String fileRoot = contextRoot+"resources/fileupload/";
 		
-		String originalFileName = multipartFile.getOriginalFilename();	//오리지날 파일명
-		String extension = originalFileName.substring(originalFileName.lastIndexOf("."));	//파일 확장자
-		String savedFileName = UUID.randomUUID() + extension;	//저장될 파일 명
+		String b_file_name = multipartFile.getOriginalFilename();	//오리지날 파일명
+		String extension = b_file_name.substring(b_file_name.lastIndexOf("."));	//파일 확장자
+		long b_file_size = multipartFile.getSize();
+		
+		String savedFileName = UUID.randomUUID().toString().replaceAll("-", " ") + extension;	//저장될 파일 명
 		
 		File targetFile = new File(fileRoot + savedFileName);	
 		try {
@@ -79,6 +81,8 @@ public class BoardController {
 			e.printStackTrace();
 		}
 		String a = jsonObject.toString();
+		System.out.println(a);
+		
 		return a;
 	}
 	

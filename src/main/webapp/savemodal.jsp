@@ -61,6 +61,8 @@ $(function() {
 	    ['height', ['height']],
 	    // 그림첨부, 링크만들기, 동영상첨부
 	    ['insert',['picture','link','video']],
+	    // 그림첨부법
+	     ['insertImage',['insertImage','url','filename']],
 	    // 코드보기, 확대해서보기, 도움말
 	    ['view', ['codeview','fullscreen', 'help']]
 
