@@ -95,7 +95,7 @@ $(function() {
 				data : data,
 				type : "POST",
 				url : "uploadmageFile.do",
-				contentType : false,
+				contentType: "application/x-www-form-urlencoded; charset=UTF-8",
 				enctype : 'multipart/form-data',
 				processData : false,
 				success : function(data) {
