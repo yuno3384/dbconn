@@ -3,6 +3,7 @@ package com.jinsu.japan.controller;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;
@@ -82,5 +83,18 @@ public class BoardController {
 	 * 
 	 * return a; }
 	 */
-
+	
+	@RequestMapping(value="getBoardList.do")
+	public String getBoardList(Model model) {
+		List<BoardVO> bList = boardService.getBoardList();
+		model.addAttribute("boardList",bList);
+		return "boardList";
+	}
+	
+	@RequestMapping(value="showBoard.do")
+	public String getBoard(BoardVO vo, Model model) {
+		BoardVO result = boardService.showBoard(vo);
+		model.addAttribute("board",result);
+		return "showBoard";
+	}
 }

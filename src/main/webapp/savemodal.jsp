@@ -36,11 +36,11 @@
 	position: absolute;
     left: 6em;
 }
-.editBtn{
+/* .editBtn{
 	position: absolute;
     right: 30%;
 
-}
+} */
 table#notice{
 	margin-top: 60px;
 	width : 700px;
@@ -139,7 +139,7 @@ $(function() {
         <tr>
         <td>작성자</td>
         <td>
-        <input type="text" class="modal_table" name="m_name" value="${userName }" readonly="readonly">
+        <input type="text" id="m_name" class="modal_table" name="m_name" value="${userName }" readonly="readonly">
         </td>
         </tr>
         <tr>

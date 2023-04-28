@@ -1,5 +1,7 @@
 package com.jinsu.japan.dao;
 
+import java.util.List;
+
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -26,8 +28,8 @@ public class BoardDAOImpl implements BoardService{
 
 	@Override
 	public BoardVO showBoard(BoardVO vo) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return mybatis.selectOne("BoardDAO.showBoard", vo);
 	}
 
 	@Override
@@ -40,6 +42,12 @@ public class BoardDAOImpl implements BoardService{
 	public int deleteBoard(BoardVO vo) {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	@Override
+	public List<BoardVO> getBoardList() {
+		
+		return mybatis.selectList("BoardDAO.getBoardList");
 	}
 
 }

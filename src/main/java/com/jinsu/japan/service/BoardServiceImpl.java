@@ -1,5 +1,7 @@
 package com.jinsu.japan.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,8 +29,8 @@ public class BoardServiceImpl implements BoardService{
 
 	@Override
 	public BoardVO showBoard(BoardVO vo) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return boardDAO.showBoard(vo);
 	}
 
 	@Override
@@ -41,6 +43,12 @@ public class BoardServiceImpl implements BoardService{
 	public int deleteBoard(BoardVO vo) {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	@Override
+	public List<BoardVO> getBoardList() {
+		// TODO Auto-generated method stub
+		return boardDAO.getBoardList();
 	}
 
 }

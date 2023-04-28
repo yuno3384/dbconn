@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%
+	/* session.setAttribute("userName", null);*/
+
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,9 +16,9 @@
 
 <style type="text/css">
 
-#div3{
+/* #div3{
 	height: 40em;
-}
+} */
 #div4{
 	background: rgb(2,0,36);
 	background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(117,121,9,1) 34%, rgba(64,163,121,1) 64%, rgba(48,175,154,1) 73%, rgba(23,194,206,1) 87%, rgba(14,201,225,1) 92%, rgba(5,208,244,1) 97%, rgba(0,212,255,1) 100%);
@@ -34,10 +38,10 @@
 	margin-top: 4.5em !important;
 }
 
-button.editBtn{
+/* button.editBtn{
 	position: absolute;
     right: 20%;
-}
+} */
 table#notice{
 	margin-top: 60px;
 
@@ -53,7 +57,7 @@ table#notice{
 .position-relative_top-20{
 	position: relative;
 	top: -21.2em;
-}
+} 
 .position-relative_top-30{
 	position: relative;
 	top: -31.5em;
@@ -91,84 +95,93 @@ table#notice{
 //       	});
         
       });   
+     <%--  
+     const btn = document.querySelector("#insertBoard");
+      btn.addEventListener("click",function() {
+    	  var name = "<%=(String)session.getAttribute("userName") %>";
+    	  if(name == null){
+    			alert("로그인을 먼저 해주세요");
+    		}
+    	  
+		}); --%>
+  
       
     </script>
 <jsp:include page="link.jsp"></jsp:include>
-			<div id="div3" class="mt-3 ms-3 col-sm-7 bg-secondary bg-grient text-body">
+			<div id="div3" class="mt-3 ms-3 col-sm-3 bg-secondary bg-grient text-body">
 			<h2>게시판</h2>
-			<button id="insertBoard" type="button" class="btn btn-primary editBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+			<button id="insertBoard" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   				게시글 작성
 			</button>
-
 <jsp:include page="savemodal.jsp"></jsp:include>
-			<div class="mt-5 ms-3 col-sm-5 ">
-			<table class="bg-success table table-bordered">
-			<tr>
-			<td class="col-sm-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate elit in tellus commodo</td>
-			</tr>
-			<tr>
-			<td class="col-sm-2">이름</td>
-			</tr>
-			</table>
-			</div>
-			<div class="position-relative_top-0 start-55 col-sm-5 ">
-			<table class="bg-primary table table-bordered">
-			<tr>
-			<td class="col-sm-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate elit in tellus commodo</td>
-			</tr>
-			<tr>
-			<td class="col-sm-2">이름</td>
-			</tr>
-			</table>
-			</div>
-			<div class="ms-3 position-relative_top-10  col-sm-5 ">
-			<table class="bg-primary table table-bordered">
-			<tr>
-			<td class="col-sm-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate elit in tellus commodo</td>
-			</tr>
-			<tr>
-			<td class="col-sm-2">이름</td>
-			</tr>
-			</table>
-			</div>	
-			<div class="position-relative_top-20 start-55 col-sm-5 ">
-			<table class="bg-primary table table-bordered">
-			<tr>
-			<td class="col-sm-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate elit in tellus commodo</td>
-			</tr>
-			<tr>
-			<td class="col-sm-2">이름</td>
-			</tr>
-			</table>
-			</div>
-			<div class="position-relative_top-20 ms-3 col-sm-5 ">
-			<table class="bg-primary table table-bordered">
-			<tr>
-			<td class="col-sm-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate elit in tellus commodo</td>
-			</tr>
-			<tr>
-			<td class="col-sm-2">이름</td>
-			</tr>
-			</table>
-			</div>	
-			<div class="position-relative_top-30 start-55 col-sm-5 ">
-			<table class="bg-primary table table-bordered">
-			<tr>
-			<td class="col-sm-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate elit in tellus commodo</td>
-			</tr>
-			<tr>
-			<td class="col-sm-2">이름</td>
-			</tr>
-			</table>
-			</div>
+<!-- 			<div class="mt-5 ms-3 col-sm-5 "> -->
+<!-- 			<table class="bg-success table table-bordered"> -->
+<!-- 			<tr> -->
+<!-- 			<td class="col-sm-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate elit in tellus commodo</td> -->
+<!-- 			</tr> -->
+<!-- 			<tr> -->
+<!-- 			<td class="col-sm-2">이름</td> -->
+<!-- 			</tr> -->
+<!-- 			</table> -->
+<!-- 			</div> -->
+<!-- 			<div class="position-relative_top-0 start-55 col-sm-5 "> -->
+<!-- 			<table class="bg-primary table table-bordered"> -->
+<!-- 			<tr> -->
+<!-- 			<td class="col-sm-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate elit in tellus commodo</td> -->
+<!-- 			</tr> -->
+<!-- 			<tr> -->
+<!-- 			<td class="col-sm-2">이름</td> -->
+<!-- 			</tr> -->
+<!-- 			</table> -->
+<!-- 			</div> -->
+<!-- 			<div class="ms-3 position-relative_top-10  col-sm-5 "> -->
+<!-- 			<table class="bg-primary table table-bordered"> -->
+<!-- 			<tr> -->
+<!-- 			<td class="col-sm-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate elit in tellus commodo</td> -->
+<!-- 			</tr> -->
+<!-- 			<tr> -->
+<!-- 			<td class="col-sm-2">이름</td> -->
+<!-- 			</tr> -->
+<!-- 			</table> -->
+<!-- 			</div>	 -->
+<!-- 			<div class="position-relative_top-20 start-55 col-sm-5 "> -->
+<!-- 			<table class="bg-primary table table-bordered"> -->
+<!-- 			<tr> -->
+<!-- 			<td class="col-sm-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate elit in tellus commodo</td> -->
+<!-- 			</tr> -->
+<!-- 			<tr> -->
+<!-- 			<td class="col-sm-2">이름</td> -->
+<!-- 			</tr> -->
+<!-- 			</table> -->
+<!-- 			</div> -->
+<!-- 			<div class="position-relative_top-20 ms-3 col-sm-5 "> -->
+<!-- 			<table class="bg-primary table table-bordered"> -->
+<!-- 			<tr> -->
+<!-- 			<td class="col-sm-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate elit in tellus commodo</td> -->
+<!-- 			</tr> -->
+<!-- 			<tr> -->
+<!-- 			<td class="col-sm-2">이름</td> -->
+<!-- 			</tr> -->
+<!-- 			</table> -->
+<!-- 			</div>	 -->
+<!-- 			<div class="position-relative_top-30 start-55 col-sm-5 "> -->
+<!-- 			<table class="bg-primary table table-bordered"> -->
+<!-- 			<tr> -->
+<!-- 			<td class="col-sm-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate elit in tellus commodo</td> -->
+<!-- 			</tr> -->
+<!-- 			<tr> -->
+<!-- 			<td class="col-sm-2">이름</td> -->
+<!-- 			</tr> -->
+<!-- 			</table> -->
+<!-- 			</div> -->
 			
 			
 			
 			
 			
 						
-			</div>
-				
+ 		</div> 
+	
 			
 				
 

@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class BoardVO {
 	// create table boards
-	private int b_id;					// 게시글 고유번호
+	private String b_id;					// 게시글 고유번호
 	private String b_writer;			// 게시글 작성자 : 회원이 입력한  이름
 	private String b_title;				// 게시글 제목
 	private String b_content;			// 게시글 내용
