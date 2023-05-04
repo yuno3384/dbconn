@@ -46,43 +46,10 @@ public class BoardController {
 		return "../../index";
 	}
 
-	/*
-	 * @RequestMapping(value="/uploadSummernoteImageFile", produces =
-	 * "application/json; charset=utf8")
-	 * 
-	 * @ResponseBody public String
-	 * uploadSummernoteImageFile(@RequestParam("file")BoardVO vo , MultipartFile
-	 * multipartFile, HttpServletRequest request ) { JsonObject jsonObject = new
-	 * JsonObject();
-	 * 
-	 * 
-	 * String fileRoot = "C:\\summernote_image\\"; // 외부경로로 저장을 희망할때.
-	 * 
-	 * 
-	 * // 내부경로로 저장 String contextRoot = new
-	 * HttpServletRequestWrapper(request).getRealPath("/"); String fileRoot =
-	 * contextRoot+"resources/fileupload/";
-	 * 
-	 * String b_file_name = multipartFile.getOriginalFilename(); //오리지날 파일명 String
-	 * extension = b_file_name.substring(b_file_name.lastIndexOf(".")); //파일 확장자
-	 * long b_file_size = multipartFile.getSize();
-	 * 
-	 * String savedFileName = UUID.randomUUID().toString().replaceAll("-", " ") +
-	 * extension; //저장될 파일 명
-	 * 
-	 * File targetFile = new File(fileRoot + savedFileName); try { InputStream
-	 * fileStream = multipartFile.getInputStream();
-	 * FileUtils.copyInputStreamToFile(fileStream, targetFile); //파일 저장
-	 * jsonObject.addProperty("url",
-	 * "/summernote/resources/fileupload/"+savedFileName); // contextroot +
-	 * resources + 저장할 내부 폴더명 jsonObject.addProperty("responseCode", "success");
-	 * 
-	 * } catch (IOException e) { FileUtils.deleteQuietly(targetFile); //저장된 파일 삭제
-	 * jsonObject.addProperty("responseCode", "error"); e.printStackTrace(); }
-	 * String a = jsonObject.toString(); System.out.println(a);
-	 * 
-	 * return a; }
-	 */
+	@RequestMapping(value="savemodal.do")
+	public String saveBoard() {
+		return "../../savemodal";
+	}
 	
 	@RequestMapping(value="getBoardList.do")
 	public String getBoardList(Model model) {
@@ -97,4 +64,17 @@ public class BoardController {
 		model.addAttribute("board",result);
 		return "showBoard";
 	}
+	@RequestMapping(value="editBoard.do")
+	public String editBoard(BoardVO vo, Model model) {
+		BoardVO result = boardService.showBoard(vo);
+		model.addAttribute("board",result);
+		return "editBoard";
+	}
+	@RequestMapping(value="updateBoard.do")
+	public String updateBoard(BoardVO vo, Model model) {
+		boardService.updateBoard(vo);
+//		model.addAttribute("board",result);
+		return "redirect:/getBoardList.do";
+	}
+	
 }

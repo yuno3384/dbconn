@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name ="google-signin-client_id" content="846205080823-fgmktrjiqgvictpkg36qcrh3isopqd11.apps.googleusercontent.com">
 <title>회원가입</title>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.min.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
@@ -11,6 +12,7 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
 <style type="text/css">
 main{
 	margin-top: 20%;
@@ -58,133 +60,7 @@ select{
 
 img.ui-datepicker-trigger { width: 16px; height: 16px;}
 </style>
-<script type="text/javascript">
-$(function() {
-	
-	// ajax 주요 키
-	// 1. url : 요청할 주소, Controller에 있는 맵핑명
-	// 2. data : 요청과 함께 서버에 보낼 문자열, JSON 객체
-	// 3. type : form에서 전송하는 method(get/post)
-	// 4. success : 요청이 성공이 되면 실행이 되는 함수(callback), function(){}으로 생성
-	// 5. dataType : 서버에서 넘어온 데이터의 형식(자료형)
-	// 6. error : 요청이 실채하면 실행이 되는 함수(callback), function(){}으로 생성
-	
-	// JS를 이용해서 채워주기 단,null에 주의 (java에서 이 데이터가 실제로 null인지 확인해야)
-	$('#checkId').click(function() {
-	
-	var email = $("#m_email_id").val()+"@"+$("#m_email_site").val();
-	var inputData = {m_email : email}; // json형식
-	if(email == "@이메일주소"){inputData = {m_email : null};}
-	// 작은 form태그 > 실행이 되면 나오는 결과를 success로 표현
-	$.ajax({
-		url: "checkId.do",
-		data : inputData,
-		type: "post",
-		contentType : 'application/x-www-form-urlencoded;charset=UTF-8',
-		success: function(ajaxData) {
-			if(email == null){alert('아이디를 입력해주세요.');
-			$("#m_email_id").focus(); }
-			else if(email.match("@이메일주소")){alert('이메일주소를 다시 확인해주세요.');
-			$("#m_email_id").focus();
-			}
-			else{
-				$("#idCheck").css({	
-				"color" : "red"
-				})
-				$("#idCheck").val(ajaxData);};
-		},
-		error : function(err) {
-			alert('에러 :'+err)
-		}
-		
-	})
-	})
-	
-	$("#register").validate({
-	     /**
-	    * submitHandler : form 양식이 유효한 경우 실질적인 
-	    * submit을 하기 위한 콜백 핸들러. 
-	    * 유효성이 확인된 후 Ajax를 통해 처리
-	    */
-// 	    submitHandler: function() {
-// 	        console.log("submit!!!!");
-// 	    },
-	    rules: { // 체크할 항목들의 룰 설정: html상에서 name이랑 매핑된다.
-	        m_email_site: {
-	        	required : true,
-// 	            remote: "/"
-	        },
-	        m_pwd: {
-	        	required : true,
-	            rangelength: [8,13]
-	        },
-	        m_rePwd: {
-	            required : true,
-	            rangelength: [8,13],
-	            equalTo : m_pwd
-	        },
-	        m_name: {
-	            required : true,
-	            rangelength: [2,5]
-	        },
-	        
-	    },
-	    messages : { //규칙체크 실패시 출력될 메시지
-	        m_email_site: {
-	            required : "이메일을 입력하세요",
-// 	            remote : "존재하는 아이디입니다"
-	        },
-	        m_pwd: {
-	            required : "비밀번호를 입력해주세요",
-	            rangelength : "최소 {8}글자에서 {13}글자사이이어야 합니다",
-	        },
-	        m_rePwd: {
-	            required : "비밀번호를 다시 한번 입력해주세요",
-	            rangelength : "최소 {8}글자에서 {13}글자사이이어야 합니다",
-	            equalTo : "비밀번호가 일치하지 않습니다."
-	        },
-	        m_name: {
-	            required : "이름을 입력하세요",
-	            rangelength : "최소 {2}글자에서 {5}글자사이이어야 합니다",
-	        },
-	        
-	    },
-	    success: function(label) {
-		      label.addClass('valid');
-		      label.text('성공'); // 출력은 안되지만 이거 없으면 녹색체크가 화면에 안 뜬다=
-	    }
-// 	    errorPlacement: function(err, element){ // 유효성 에러 발생시 처리하는 로직
-// 	        $(element).closest(".box-input").addClass("error");
-// 	    },
-	});
-	
-	 $("#m_birthday").datepicker({
-		  
-         showOn: "both", // 버튼과 텍스트 필드 모두 캘린더를 보여준다.
-         buttonImage: "resources/calendar.png", // 버튼 이미지
-         buttonImageOnly: true, // 버튼에 있는 이미지만 표시한다.
-         changeMonth: true, // 월을 바꿀수 있는 셀렉트 박스를 표시한다.
-         changeYear: true, // 년을 바꿀 수 있는 셀렉트 박스를 표시한다.
-         minDate: '-100y', // 현재날짜로부터 100년이전까지 년을 표시한다.
-         nextText: '다음 달', // next 아이콘의 툴팁.
-         prevText: '이전 달', // prev 아이콘의 툴팁.
-         numberOfMonths: [1,1], // 한번에 얼마나 많은 월을 표시할것인가. [2,3] 일 경우, 2(행) x 3(열) = 6개의 월을 표시한다.
-         stepMonths: 3, // next, prev 버튼을 클릭했을때 얼마나 많은 월을 이동하여 표시하는가. 
-         yearRange: 'c-100:c+10', // 년도 선택 셀렉트박스를 현재 년도에서 이전, 이후로 얼마의 범위를 표시할것인가.
-         showButtonPanel: true, // 캘린더 하단에 버튼 패널을 표시한다. ( ...으로 표시되는부분이다.) 
-         currentText: '오늘 날짜' , // 오늘 날짜로 이동하는 버튼 패널
-         closeText: '닫기',  // 닫기 버튼 패널
-         dateFormat: "yy년mm월dd일", // 텍스트 필드에 입력되는 날짜 형식.
-         showAnim: "slide", //애니메이션을 적용한다.  
-         showMonthAfterYear: true , // 월, 년순의 셀렉트 박스를 년,월 순으로 바꿔준다. 
-         dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'], // 요일의 한글 형식.
-         monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'] // 월의 한글 형식.
-
-    });
-
-});
-
-</script>
+<script type="text/javascript" src="resources/js/SignUp.js"></script>
 </head>
 
 <body class="bg-danger-subtle">
@@ -207,26 +83,130 @@ $(function() {
 
   <div class="tab-pane fade show ms-13" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
     <form id="register" action="insert.do" method="post">
-<!--       <div class="text-center mb-3"> -->
-<!--         <p>Sign up with:</p> -->
-<!--         <button type="button" class="btn btn-link btn-floating mx-1"> -->
-<!--           <i class="fab fa-facebook-f"></i> -->
-<!--         </button> -->
+ <div class="text-center mb-3">
+        <p>Sign up with:</p>
+        <button type="button" class="btn btn-link btn-floating mx-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+</svg>
+        </button>
 
-<!--         <button type="button" class="btn btn-link btn-floating mx-1"> -->
-<!--           <i class="fab fa-google"></i> -->
-<!--         </button> -->
+        <button id="GgCustomLogin" type="button" class="btn btn-link btn-floating mx-1">
+          <a href="javascript:void(0)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
+  <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
+</svg>
+		</a>
+        </button>
 
-<!--         <button type="button" class="btn btn-link btn-floating mx-1"> -->
-<!--           <i class="fab fa-twitter"></i> -->
-<!--         </button> -->
+        <button onclick="kakaoLogin();" type="button" class="btn btn-link btn-floating mx-1">
+        <a href="javascript:void(0)">
+          <img src="resources/kakao_login_medium.png"/>
+        </a>
+        </button>
+	<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+	<script>
+Kakao.init('d5c23c0ed89c9f83428102c4388cc45a'); //발급받은 키 중 javascript키를 사용해준다.
+console.log(Kakao.isInitialized()); // sdk초기화여부판단
+//카카오로그인
+function kakaoLogin() {
+    Kakao.Auth.login({
+      success: function (response) {
+        Kakao.API.request({
+          url: '/v2/user/me',
+          success: function (response) {
+        	  console.log(response)
+          },
+          fail: function (error) {
+            console.log(error)
+          },
+        })
+      },
+      fail: function (error) {
+        console.log(error)
+      },
+    })
+  }
+//카카오로그아웃  
+function kakaoLogout() {
+    if (Kakao.Auth.getAccessToken()) {
+      Kakao.API.request({
+        url: '/v1/user/unlink',
+        success: function (response) {
+        	console.log(response)
+        },
+        fail: function (error) {
+          console.log(error)
+        },
+      })
+      Kakao.Auth.setAccessToken(undefined)
+    }
+  }  
+</script>
+        <button type="button" class="btn btn-link btn-floating mx-1">
+          <a id="naverIdLogin_loginButton" href="javascript:void(0)">
+          <img style="width :35px; height:35px; " src="resources/btnD_아이콘사각.png"/>
+      </a>
+        </button>
+	<script src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js" charset="utf-8"></script>
 
-<!--         <button type="button" class="btn btn-link btn-floating mx-1"> -->
-<!--           <i class="fab fa-github"></i> -->
-<!--         </button> -->
-<!--       </div> -->
+<script>
 
-<!--       <p class="text-center">or:</p> -->
+var naverLogin = new naver.LoginWithNaverId(
+		{
+			clientId: "cVmUE35eT6fcVCL8gV6N", //내 애플리케이션 정보에 cliendId를 입력해줍니다.
+			callbackUrl: "http://localhost:8080/japan/index.do", // 내 애플리케이션 API설정의 Callback URL 을 입력해줍니다.
+			isPopup: false,
+			callbackHandle: true
+		}
+	);	
+
+naverLogin.init();
+
+window.addEventListener('load', function () {
+	naverLogin.getLoginStatus(function (status) {
+		if (status) {
+			var email = naverLogin.user.getEmail(); // 필수로 설정할것을 받아와 아래처럼 조건문을 줍니다.
+    		
+			console.log(naverLogin.user); 
+    		
+            if( email == undefined || email == null) {
+				alert("이메일은 필수정보입니다. 정보제공을 동의해주세요.");
+				naverLogin.reprompt();
+				return;
+			}
+		} else {
+			console.log("callback 처리에 실패하였습니다.");
+		}
+	});
+});
+
+
+var testPopUp;
+function openPopUp() {
+    testPopUp= window.open("https://nid.naver.com/nidlogin.logout", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,width=1,height=1");
+}
+function closePopUp(){
+    testPopUp.close();
+}
+
+function naverLogout() {
+	openPopUp();
+	setTimeout(function() {
+		closePopUp();
+		}, 1000);
+	
+	
+}
+</script>
+      
+      
+      
+      
+      
+      </div>
+	
+      <p class="text-center">or:</p> 
 
       <!-- Email input -->
       <div class="form-outline mb-3">
@@ -293,5 +273,6 @@ $(function() {
 
 <!-- Pills content -->
 </main>
+<script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
 </body>
 </html>

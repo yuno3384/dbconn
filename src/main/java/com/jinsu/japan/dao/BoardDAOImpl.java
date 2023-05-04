@@ -34,8 +34,8 @@ public class BoardDAOImpl implements BoardService{
 
 	@Override
 	public int updateBoard(BoardVO vo) {
-		// TODO Auto-generated method stub
-		return 0;
+		
+		return mybatis.update("BoardDAO.updateBoard", vo);
 	}
 
 	@Override

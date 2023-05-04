@@ -27,8 +27,14 @@
 	 FROM boards
 	WHERE b_id = #{b_id} 
 </select>
-<!-- 회원 삭제 : 파리미터 필요 : VO  -->
-
+<!-- 게시물 수정 : 파리미터 필요 : VO  -->
+<update id="updateBoard" parameterType="board">
+	UPDATE boards
+	 SET b_title = #{b_title}, 
+	 	 b_content = #{b_content}, 
+	 	 b_date = sysdate
+	WHERE b_id = #{b_id} 
+</update>
 
 
 </mapper>  

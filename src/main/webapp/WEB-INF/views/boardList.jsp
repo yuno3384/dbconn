@@ -20,7 +20,12 @@
 	<c:forEach items="${boardList }" var="board" >
 	<tr>
 	<td><a href="showBoard.do?b_id=${board.b_id }">
-	${board.b_id }</a></td>
+	${board.b_id }</a>
+ 	<%-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  ${board.b_id }
+</button> --%>
+</td>
+<%-- 	<jsp:include page="showBoard2?b_id=${board.b_id }"></jsp:include> --%>
 	<td>${board.b_title }</td>
 	<td>${board.b_writer }</td>
 	</tr>
