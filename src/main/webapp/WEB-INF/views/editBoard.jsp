@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix='c' uri="http://java.sun.com/jsp/jstl/core" %>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +15,7 @@
       <div class="d-flex pt-5 justify-content-center align-items-center bd-highlight">
       <form action="updateBoard.do?b_id=${board.b_id }" method="post">
       <!-- 게시글번호와 그 속 Vo가 전부 담겨있음 > step으로는 구현 불가 > 별도 매핑 -->
-         <input name="b_id" type="hidden" value="${board.b_id}" />
+         <!--  <input name="b_id" type="hidden" value="${board.b_id}" />-->
          <table class="table table-bordered">
             <tr>
                <td>제목</td>

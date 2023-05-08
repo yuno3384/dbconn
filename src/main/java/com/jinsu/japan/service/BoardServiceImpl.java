@@ -35,7 +35,8 @@ public class BoardServiceImpl implements BoardService{
 
 	@Override
 	public int updateBoard(BoardVO vo) {
-		
+		System.out.println("Con 수정 요청 id:"+ vo.getB_id());
+		System.out.println("Con 수정 요청값 :"+ vo.getB_title());	
 		return boardDAO.updateBoard(vo);
 	}
 

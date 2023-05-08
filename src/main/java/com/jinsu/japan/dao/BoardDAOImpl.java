@@ -34,7 +34,8 @@ public class BoardDAOImpl implements BoardService{
 
 	@Override
 	public int updateBoard(BoardVO vo) {
-		
+		System.out.println("Ser 수정 요청 id:"+ vo.getB_id());
+		System.out.println("Ser 수정 요청값 :"+ vo.getB_title());
 		return mybatis.update("BoardDAO.updateBoard", vo);
 	}
 

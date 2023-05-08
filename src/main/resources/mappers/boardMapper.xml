@@ -30,10 +30,10 @@
 <!-- 게시물 수정 : 파리미터 필요 : VO  -->
 <update id="updateBoard" parameterType="board">
 	UPDATE boards
-	 SET b_title = #{b_title}, 
-	 	 b_content = #{b_content}, 
-	 	 b_date = sysdate
-	WHERE b_id = #{b_id} 
+	 SET  B_TITLE = #{b_title} 
+	 	 ,B_CONTENT = #{b_content} 
+	 	 ,B_DATE = sysdate
+	WHERE B_ID = #{b_id} 
 </update>
 
 
