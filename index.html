@@ -1,0 +1,39 @@
+<!--
+자 이번엔 state가 form에서 input을 어떻게 받는지에 대해 
+알아보도록하자 : unit conversion(단위 변환기)를 만들어보자.
+-->
+<!DOCTYPE html>
+<html>
+<body>
+  <div id="root"></div>
+  <!-- 
+  <input id="hours" placeholder ="Hours" type="number"> </input> -->
+</body>
+  <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  
+  <script type="text/babel"> 
+    const root = document.getElementById('root');
+
+    function App() {
+   
+      // 1. 분을 시간단위로 바꿔보자
+      return (
+      <div>
+        <h1 className="hi">Super Converter</h1> 
+        <label htmlFor ="minutes">Minutes</label>
+        <input id="minutes" placeholder="Minutes" type= "number"> </input>
+      <label htmlFor ="hours">Hours</label>
+      
+      </div>
+      )
+    };
+    // 1. for와 class는 JS가 이미 선점한 단어이므로 react에선 사용이 불가능 하다. 
+    // 18부터는 render기능이 막힘.
+    ReactDOM.render(<App />,root);
+  </script>
+</html>
+
+
+
